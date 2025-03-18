@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Pendaftaran</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        background-color: #f4f4f4;
+      }
+      h2 {
+        text-indent: 20px;
+        text-align: center;
+      }
+      label {
+        display: block;
+        font-weight: bold;
+        letter-spacing: 1px;
+        margin-top: 10px;
+      }
+      input,
+      select,
+      textarea {
+        display: block;
+        width: 100%;
+        padding: 8px;
+        margin-top: 5px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        word-spacing: 3px;
+      }
+      textarea {
+        line-height: 1.5;
+        white-space: pre-wrap;
+      }
+      .image-container {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      .form-container {
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        max-width: 500px;
+        margin: auto;
+      }
+      input[type="submit"] {
+        background-color: #28a745;
+        color: white;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+      input[type="submit"]:hover {
+        background-color: #218838;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="image-container">
+      <img src="football.jpg" width="85" height="88" alt="Football" />
+    </div>
+    <div class="form-container">
+      <h2>Formulir Pendaftaran Sepak Bola</h2>
+      <form action="#" method="POST">
+        <label for="nama_depan">Nama Pemain</label>
+        <input
+          type="text"
+          id="nama_depan"
+          name="nama_depan"
+          placeholder="Nama Depan"
+          required
+        />
+        <input
+          type="text"
+          id="nama_belakang"
+          name="nama_belakang"
+          placeholder="Nama Belakang"
+          required
+        />
+
+        <label for="email">E-mail Pemain</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="contoh: nama@contoh.com"
+          required
+        />
+
+        <label for="tim">Kelompok Tim Pemain</label>
+        <select id="tim" name="tim" required>
+          <option value="">Please Select</option>
+          <option value="tim_a">Tim A</option>
+          <option value="tim_b">Tim B</option>
+          <option value="tim_c">Tim C</option>
+        </select>
+
+        <label>Menyerang atau Bertahan</label>
+        <div class="image-container">
+          <img src="tactic.jpg" width="150" height="90" alt="Tactic" />
+        </div>
+        <input
+          type="radio"
+          id="menyerang"
+          name="posisi"
+          value="Menyerang"
+          required
+        />
+        <label for="menyerang">Menyerang</label>
+        <input
+          type="radio"
+          id="bertahan"
+          name="posisi"
+          value="Bertahan"
+          required
+        />
+        <label for="bertahan">Bertahan</label>
+        <input
+          type="radio"
+          id="tidak_tahu"
+          name="posisi"
+          value="Tidak Tahu"
+          required
+        />
+        <label for="tidak_tahu">Tidak Tahu</label>
+
+        <label for="tinggi">Tinggi</label>
+        <input
+          type="text"
+          id="tinggi"
+          name="tinggi"
+          placeholder="Tinggi dalam cm"
+          required
+        />
+
+        <label for="berat">Berat</label>
+        <input
+          type="text"
+          id="berat"
+          name="berat"
+          placeholder="Berat dalam kg"
+          required
+        />
+
+        <label for="komentar">Komentar</label>
+        <textarea
+          id="komentar"
+          name="komentar"
+          placeholder="Ketik di sini..."
+        ></textarea>
+
+        <input type="submit" value="Daftar" />
+      </form>
+    </div>
+  </body>
+</html>
